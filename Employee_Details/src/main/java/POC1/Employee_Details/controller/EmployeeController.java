@@ -38,12 +38,12 @@ public class EmployeeController {
     }
 
     //Update Employee
-//    @PutMapping("{id}")
-//    public ResponseEntity<EmployeeDto> updateEmployee(@PathVariable("id") Long employeeId, @RequestBody EmployeeDto updatedEmployee) {
-//        EmployeeDto employeeDto=employeeService.updateEmployee(employeeId,updatedEmployee);
-//
-//        return new ResponseEntity<>(employeeDto,HttpStatus.OK);
-//    }
+    @PutMapping("{id}")
+    public ResponseEntity<EmployeeDto> updateEmployee(@PathVariable("id") Long employeeId, @RequestBody EmployeeDto updatedEmployee) {
+        EmployeeDto employeeDto=employeeService.updateEmployee(employeeId,updatedEmployee);
+
+        return new ResponseEntity<>(employeeDto,HttpStatus.OK);
+    }
 
 
 }
